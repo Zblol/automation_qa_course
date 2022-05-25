@@ -70,6 +70,6 @@ class TestAlertsFrameWindow:
             modal_dialogs_page = ModalDialogsPage(driver, 'https://demoqa.com/modal-dialogs')
             modal_dialogs_page.open()
             small, large = modal_dialogs_page.check_modal_dialogs()
-            assert small[1] < large[1], 'text from small dialog is less than text from large dialog'
+            assert small[1] < large[1], 'text from large dialog is less than text from small dialog'
             assert small[0] == 'Small Modal', 'The header is not "Small modal"'
             assert large[0] == 'Large Modal', 'The header is not "Large modal"'

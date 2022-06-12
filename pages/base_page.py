@@ -48,6 +48,11 @@ class BasePage:
         action.drag_and_drop_by_offset(element, x_coords, y_coords)
         action.perform()
 
+    def action_drag_and_drop_to_element(self, what, where):
+        action = ActionChains(self.driver)
+        action.drag_and_drop(what, where)
+        action.perform()
+
     def action_move_to_element(self, element):
         action = ActionChains(self.driver)
         action.move_to_element(element)
